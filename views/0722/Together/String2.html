@@ -20,11 +20,13 @@
             var space = splitspaces.split(" "); // Split on spaces
             var sign = splitsign.split("|");
         </script>
+            txt.concat : <span id="demo05"></span><br>
             txt.trim : <span id="demo06"></span><br> ...
             txt.splitsign : <span id="demo07"></span><br>
             txt.splitspace : <span id="demo08"></span><br>
             txt.splitsign : <span id="demo09"></span><br>
         <script>
+            document.getElementById("demo05").innerHTML = concat;
             document.getElementById("demo06").innerHTML = trim;
             document.getElementById("demo07").innerHTML = commas[0];
             document.getElementById("demo08").innerHTML = space[1];
