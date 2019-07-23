@@ -14,18 +14,23 @@
         <script></script>
     </head>
     <body>
-        <script>
+        <script>//Hi, Sam! / name / Sam
             var sentence="Hi, my name is Sam!";
             var space = sentence.split(" ");
-            var long = sentence.
+            var comma = sentence.split(",");
+            var n = sentence.split(" ");
         </script>
         출력 : <span id="demo1"></span><br>
         출력 : <span id="demo2"></span><br>
-        출력 : <span id="demo3"></span><br>
+        출력 : <span id="demo3"></span><span id="demo6"></span><br>
         출력 : <span id="demo4"></span><br>
         출력 : <span id="demo5"></span><br>
         <script>
             document.getElementById("demo1").innerHTML= space[0];
+            document.getElementById("demo2").innerHTML= comma[1];
+            document.getElementById("demo3").innerHTML= space[0]+" "+space[4];
+            document.getElementById("demo4").innerHTML= sentence.substring(sentence.indexOf("name"),sentence.lastIndexOf("name")+"name".length);
+            document.getElementById("demo5").innerHTML= sentence.substring(sentence.indexOf("Sam"),sentence.lastIndexOf("Sam")+"Sam".length);
         </script>
     </body>
 </html>
