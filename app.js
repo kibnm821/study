@@ -17,17 +17,14 @@ app.use(express.static('Views'))
 
 //localhost domain
 
-router.get('/', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/index.html'));
+router.get('/Date', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0723/Date.html'));
 });
+
+router.get('/result', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/0723/Date.html'));
+    });
 
 //request
-
-router.get('/action', function (req, res) {
-console.log(req.query);
-res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd+
-'<br>Request email : '+req.query.email+'<br>Request NickName : '+req.query.nc+
-'<br>Request address1 : '+req.query.add1+'<br>Request addres2 : '+req.query.add2)
-});
 
 app.use('/', router);
