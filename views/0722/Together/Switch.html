@@ -6,11 +6,14 @@
     </head>
     <body>
             <script>
-
+                    var str2 = "10, 20, 30, 40, 50"
+                    var str1 = "JavaScript Program to illustrate split() function"
                     var str = "Hi, my name is Sam!"; // 변수 지정
                     var a = str.split(","); // Split on commas
                     var b = str.split(" "); // Split on spaces
                     var c = str.split("!");
+                    var d = str1.split(" ");
+                    var e = str2.split(",");
                     var i = str.indexOf(b[2]);
                     var f = str.indexOf(b[3])-8;
                     var ss = str.indexOf(b[4]);
@@ -21,8 +24,19 @@
                    출력 : <span id="demo07"></span><br>
                    출력 : <span id="demo08"></span><span id="demo81"></span><br>
                    출력 : <span id="demo09"></span><br>
-                   출력 : <span id="demo10"></span><br>
-                   출력 : <span id="demo11"></span><br>
+                   출력 : <span id="demo10"></span><br><br>
+
+                   출력 : <span id="demo12"></span><br>
+                   출력 : <span id="demo13"></span><br>
+                   출력 : <span id="demo14"></span><br>
+                   출력 : <span id="demo15"></span><br>
+                   출력 : <span id="demo16"></span><br><br>
+                   출력 : <span id="demo17"></span><br>
+                   출력 : <span id="demo18"></span><br>
+                   출력 : <span id="demo19"></span><br>
+                   출력 : <span id="demo20"></span><br>
+                   출력 : <span id="demo21"></span><br>
+
             <script>
                     document.getElementById("demo06").innerHTML = b[0];
                     document.getElementById("demo07").innerHTML = a[1];
@@ -30,7 +44,20 @@
                     document.getElementById("demo81").innerHTML = b[4];
                     document.getElementById("demo09").innerHTML = str.substr(i,f);
                     document.getElementById("demo10").innerHTML = str.substr(ss,3);
-                    document.getElementById("demo11").innerHTML = sf;
+
+
+                    document.getElementById("demo12").innerHTML = d[0];
+                    document.getElementById("demo13").innerHTML = d[1];
+                    document.getElementById("demo14").innerHTML = d[2];
+                    document.getElementById("demo15").innerHTML = d[3];
+                    document.getElementById("demo16").innerHTML = d[4];
+
+
+                    document.getElementById("demo17").innerHTML = e[0];
+                    document.getElementById("demo18").innerHTML = e[1];
+                    document.getElementById("demo19").innerHTML = e[2];
+                    document.getElementById("demo20").innerHTML = e[3];
+                    document.getElementById("demo21").innerHTML = e[4];
             </script>
     </body>
 </html>
