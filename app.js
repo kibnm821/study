@@ -17,14 +17,12 @@ app.use(express.static('Views'))
 
 //localhost domain
 
-router.get('/Date', function (req, res) {
+router.get('/login', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0723/Date.html'));
 });
 
-router.get('/result', function (req, res) {
-    res.sendFile(path.join(__dirname + '/Views/0723/Date.html'));
-    });
+
 
 //request
-
+res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.password);
 app.use('/', router);
