@@ -10,10 +10,34 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title></title>
+        <title>onsubmit</title>
         <script></script>
     </head>
     <body>
-        
+        <script>
+            function validateform(){
+                var name = document.myform.name.value;
+                var pwd = document.myform.pwd.value;
+
+                if(name == null || name == ""){
+                    var strvalidation = "Name can't bee blank";    
+                    document.getElementById("demo").innerHTML = strvalidation;
+                    return false;
+                }
+                if(pwd < 7){
+                    var strvalidation = "password can't bee blank";    
+                    document.getElementById("demo1").innerHTML = strvalidation;
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        <span id="demo"></span><br>
+        <span id="demo1"></span><br>
+        <form name="myform" action="/login" onsubmit="return validateform()">
+            Name : <input type="text" name="name"><br/>
+            Password : <input type="password" name="pwd"><br/>
+            <input type="submit" value="register">
+        </form>
     </body>
 </html>
