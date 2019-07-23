@@ -10,26 +10,36 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Date</title>
+        <title>Function</title>
         <script></script>
     </head>
     <body>
-        <p id="demo01"></p>
+        <p id="demo"></p>
         <script>
-            document.getElementById("demo01").innerHTML = parseInt("10.33")+"<br>"+
-            parseInt("10 6")+"<br>"+parseInt("years 10");
+            function myFunction(p1,p2){
+                return p1*p2;
+            }
+            document.getElementById("demo").innerHTML = myFunction(4,3);
         </script>
 
-        <p id="demo02"></p>
-        <script>
-            var d = new Date();
-            var months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
-            document.getElementById("demo02").innerHTML=months[d.getMonth()];
-        </script>
+        <script type = "text/javascript">
+            function concatenate(first, last) {
+            var full;
+            full = first + last;
+            return full;
+            }
 
-        <p id="demo03"></p>
-        <script>
-            document.getElementById("demo03").innerHTML=Math.random();
+            function secondFunction() {
+            var result;
+            result = concatenate('Zara', 'Ali');
+            document.write (result );
+            }
         </script>
+        <form>
+            <input type = "button" onclick = "secondFunction()" value = "Call Function">
+            <input type="text" name="1" value="">
+            <input type="text" name="2" value="">
+            <input type="button" onclick="concatenate()" value="Call Function">
+        </form>
     </body>
 </html>
