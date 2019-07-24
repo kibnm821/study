@@ -11,9 +11,27 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title>Function</title>
-        <script></script>
+        
     </head>
     <body>
+        <span id="demo01"></span>
+        <span id="demo02"></span>
+        <script>
+            var person = {
+                fullName : function(city, country){
+                    return this.firstName + "" + this.lastName + "," + city + "," + country;
+                }
+            }
+            var person1 = {
+                firstName : "John", lastName : "Doe"
+            }
+            var x = person.fullName.call(person1, "Oslo","Norway");
+            document.getElementById("demo01").innerHTML = x;
+            var living = function(city, country){
+                return city + "," + country;
+            }
+            document.getElementById("demo02").innerHTML = living('Korea','pangyo');
+        </script>
         
     </body>
 </html>
