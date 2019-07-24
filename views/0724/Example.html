@@ -14,55 +14,41 @@
         
     </head>
     <body>
-        <form name="test">
+        <form>
             <div>
-                <input type="text" id="num1">
-                <input type="text" id="num2">
-                <button type="submit" onclick="">실행</button>
+                <input type="text" id="test">
+                <input type="text" id="testt">
+                <button type="submit" onclick="a()">실행</button>
                 <div id="demo01"></div>
-            </div>
-
-            <div>
-                <input type="text" id="str">
-                <input type="text" id="a">
-                <button type="submit" onclick="">실행</button>
-                <div id="demo02"></div>
-            </div>
-
-            <div>
-                <input type="text" id="css">
-                <input type="text" id="html">
-                <button type="submit" onclick="">실행</button>
-                <div id="demo03"></div>
             </div>
         </form>
         
         <script>
             //1번
-            var test = {
-                compare: function(num1,num2){
-                    if(num1>num2){
-                        return num1;
-                    }else if(num1==num2){
-                        return same;
-                    }else{
-                        return num2;
-                    }
-                }
-            }
             var same = "내용이 같습니다."
-            document.getElementById("demo01").innerHTML = test.compare(num1,num2)
+            var pre
+            function a(){
+                var num1 = document.getElementById("test").value
+                var num2 = document.getElementById("testt").value
+                if(num1>num2){
+                    pre = num1;
+                }else if(num1==num2){
+                    pre = same;
+                }else{
+                    pre = num2;
+                }
+                document.getElementById("demo01").innerHTML = pre
+            }
+            
             //1번끝
 
             //2번
-            var str = "HTML element has been chaned"
             var input = {
                 subStringWithText: function(str,a){
                     var postion = str.substring(0,str.indexOf(a))
                     document.getElementById("demo02").innerHTML = postion
                 },
             }
-            input.subStringWithText(str,a)
 
             //3번
 
@@ -75,7 +61,6 @@
                     document.getElementById("demo03").innerHTML = pos2
                 },
             }
-            change.getTextAndreplace(str,css,html)
         </script>
     </body>
 </html>
