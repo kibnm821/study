@@ -25,8 +25,12 @@ router.get('/onsubmit', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0723/onsubmit.html'));
 });
 
-router.get('/geo', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0724/Geolocation.html'));
+router.get('/Cookies', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/Cookies.html'));
+});
+
+router.get('/login', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/login.html'));
 });
 
 //request
@@ -38,9 +42,9 @@ res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd+
 '<br>Request address1 : '+req.query.add1+'<br>Request addres2 : '+req.query.add2)
 });
 
-router.get('/login', function (req, res) {
+router.get('/loginpage', function (req, res) {
 console.log(req.query);
-res.send('Request name : '+req.query.name+'<br>Request password : '+req.query.pwd)
+res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd)
 });
 
 app.use('/', router);

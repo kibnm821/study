@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Login</title>
+        
+    </head>
+    <body>
+        <div class="container">
+            <form action="/loginpage">
+                <div>
+                    <div class="col-6">
+                        <label>Log In</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="id">
+                    </div>
+                    <div class="col-6">
+                        <input type="password" id="pwd">
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" onclick="setCookie()">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script>
+            function setCookie(){
+                var id = document.getElementById("id").value
+                var pwd = document.getElementById("pwd").value
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expiress = "expiress=" + d.toGMTString();
+                document.cookie = id + ";" + pwd + ";" + expires + ";path=/";
+            }
+        </script>
+    </body>
+</html>
