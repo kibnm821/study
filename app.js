@@ -25,6 +25,10 @@ router.get('/onsubmit', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0723/onsubmit.html'));
 });
 
+router.get('/geo', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/Geolocation.html'));
+});
+
 //request
 
 router.get('/action', function (req, res) {
