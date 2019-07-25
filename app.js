@@ -33,6 +33,10 @@ router.get('/login', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0724/login.html'));
 });
 
+router.get('/jQuery', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0725/jQuery.html'));
+});
+
 //request
 
 router.get('/action', function (req, res) {
