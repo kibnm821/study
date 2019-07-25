@@ -10,17 +10,26 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Event</title>
+        <title>Event_Key</title>
         <script>
-            $(function(){
-                $("input").focus(function(){
-                    $(this).css("background-color","grey");});
-                $("input").blur(function(){
-                    $(this).css("background-color","green");});
+            $(document).on('keypress',function(evnet){
+                if(event.which == 13){
+                    alert('You pressed enter!');
+                }
+            });
+            $().ready(function(){
+                $('#textbox').keyup(function(event){
+                    $('#msg-keyup').html('keyup() is triggered!, keyCode = ' + event.keyCode)
+                });
+                $('#textbox').keydown(function(event){
+                    $('#msg-kedown').html('keydown() is triggered!, keyCode = ' + event.keyCode)
+                });
             });
         </script>
     </head>
+    
     <body>
-        Name : <input type="text" name="fullname"><br>
+        <input type="text" id="textbox">
+        <p id="msg-keyup"></p><p id="msg-keydown"></p>
     </body>
 </html>

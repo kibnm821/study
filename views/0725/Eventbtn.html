@@ -10,17 +10,24 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Event</title>
+        <title>Eventbtn</title>
         <script>
             $(function(){
-                $("input").focus(function(){
-                    $(this).css("background-color","grey");});
-                $("input").blur(function(){
-                    $(this).css("background-color","green");});
+                $("p").on({
+                    mouseenter: function(){
+                        $(this).css("background-color","lightgray");
+                    },
+                    mouseleave: function(){
+                        $(this).css("background-color","lightblue");
+                    },
+                    click: function(){
+                        $(this).css("background-color","yellow");
+                    }
+                });
             });
         </script>
     </head>
     <body>
-        Name : <input type="text" name="fullname"><br>
+        <p>Click or move the mouse pointer over this paragraph.</p>
     </body>
 </html>
