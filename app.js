@@ -17,12 +17,9 @@ app.use(express.static('Views'))
 
 //localhost domain
 
-router.get('/', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/index.html'));
-});
 
-router.get('/onsubmit', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0723/onsubmit.html'));
+router.get('/geo', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/Function.html'));
 });
 
 router.get('/Cookies', function (req, res) {
@@ -39,16 +36,19 @@ res.sendFile(path.join(__dirname + '/Views/0725/jQuery.html'));
 
 //request
 
-router.get('/action', function (req, res) {
-console.log(req.query);
-res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd+
-'<br>Request email : '+req.query.email+'<br>Request NickName : '+req.query.nc+
-'<br>Request address1 : '+req.query.add1+'<br>Request addres2 : '+req.query.add2)
-});
+
 
 router.get('/loginpage', function (req, res) {
 console.log(req.query);
 res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd)
 });
 
+//////////////////////////////////////웅재////////////////////////////////////////////////
+
+router.get('/popup', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/0725/jquery.html'));
+    });
+router.get('/syntax', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/0725/syntax.html'));
+    });
 app.use('/', router);

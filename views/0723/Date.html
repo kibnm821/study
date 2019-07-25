@@ -12,24 +12,36 @@
 
         <title>Date</title>
         <script></script>
+
     </head>
     <body>
-        <p id="demo01"></p>
-        <script>
-            document.getElementById("demo01").innerHTML = parseInt("10.33")+"<br>"+
-            parseInt("10 6")+"<br>"+parseInt("years 10");
-        </script>
 
-        <p id="demo02"></p>
-        <script>
-            var d = new Date();
-            var months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
-            document.getElementById("demo02").innerHTML=months[d.getMonth()];
-        </script>
 
-        <p id="demo03"></p>
-        <script>
-            document.getElementById("demo03").innerHTML=Math.random();
-        </script>
+            <script>
+                function validateform() 
+                {   var name = document.myform.name.value;
+                    if(name == null||name =="")
+                    {
+                        var namefal = "Name is blanked!"
+                        document.getElementById("demo").innerHTML = namefal;
+                        return false;
+                    } if (password.length < 7)
+                    {
+                        var passfal = "Password must be at least 6 characters long."
+                        document.getElementById("demo1").innerHTML = passfal;
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
+
+        <p id ="demo1"></p>
+        <p id="demo"></p>
+        <form name = "myform" action= "/login" onsubmit="return validdateform()">
+            Name : <input type="text" name = "id"><br>
+            Password : <input type = "password" name = "password"><br>
+            <input type="submit" value="register"> 
+        </form>    
+
     </body>
 </html>

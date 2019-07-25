@@ -11,39 +11,56 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title>Login</title>
-        
-    </head>
-    <body>
         <script>
-            function setCookie(){
-                var name = document.getElementById("id").value
-                var value = document.getElementById("pwd").value
-                document.cookie = name + ";" + pwd + ";path=/";
+            function setCookie(logform)
+            {
+                var id = logform.id.value;
+                var pwd = logform.pwd.value;
+                var check = logform.remem.checked;
+                document.cookie = id + ";" + pwd +";"+"path=/";
+                document.cookie = check + ";"+"path=/";
+                alert(document.cookie);
             }
-            function getCookie(){
+
+            function getCookie()
+            {
+
                 var decodedCookie = decodeURIComponent(document.cookie);
                 var ca = decodedCookie.split(';');
-                alert(ca[0]);
-            }
+                alert(ca[1]);
+                document.getElementById("id").value = ca[0];
+                document.getElementById("pwd").value = ca[1];
+             }
         </script>
-        <div class="container">
-            <form>
+    </head>
+    <body>
+
+
+        <div class="container d-flex justify-content-center">
+            <form action="/loginpage" onsubmit="return setCookie(this)">
+
                 <div>
-                    <div class="col-6">
-                        <label>Log In</label>
+                    <div>
+                        <label><h3>Log In</h3></label>
                     </div>
-                    <div class="col-6">
-                        <input type="text" id="id">
+                    <div class = "form-group">
+                        <input type="text" class="form-control" id="id">
                     </div>
-                    <div class="col-6">
-                        <input type="password" id="pwd">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd">
                     </div>
-                    <div class="col-6">
-                        <button type="submit" onclick="setCookie(id,pwd)">Login</button>
-                        <button onclick="getCookie()">getCookie</button>
+
+                    <div>
+                        <input type = "checkbox" id="remem">
+                        <label>Remember me</label>
                     </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Login</button>
+
+   
                 </div>
             </form>
         </div>
+
     </body>
 </html>

@@ -12,158 +12,103 @@
 
         <title>Event</title>
         <script>
-            function checkFunction(){
-                var looks1,looks2,looks3,looks4,looks5,looks6;
-                var check1 = document.Check_Form.First.value
-                var check2 = document.Check_Form.Last.value
-                var check3 = document.Check_Form.Username.value
-                var check4 = document.Check_Form.City.value
-                var check5 = document.Check_Form.State.value
-                var check6 = document.Check_Form.Zip.value
 
-                if(check1 == null || check1 == ""){//first
-                    looks1 = "Please write First name."
-                    document.getElementById("First_end").innerHTML = looks1
-                    document.Check_Form.First.classList.remove("is-valid")
-                    document.Check_Form.First.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("First_end").innerHTML = looks1
-                    document.Check_Form.First.classList.remove("is-invalid")
-                    document.Check_Form.First.classList.add("is-valid")
+            function mysubmit() 
+            {
+                var myform = document.forms['myform'];
+                if(myform['first'] == "Mark")
+                {
+
                 }
 
-                if(check2 == null || check2 == ""){//Last
-                    looks1 = "Please write Last name."
-                    document.getElementById("Last_end").innerHTML = looks1
-                    document.Check_Form.Last.classList.remove("is-valid")
-                    document.Check_Form.Last.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("Last_end").innerHTML = looks1
-                    document.Check_Form.Last.classList.remove("is-invalid")
-                    document.Check_Form.Last.classList.add("is-valid")
-                }
-
-                if(check3 == null || check3 == ""){//User
-                    looks1 = "Please choose a username."
-                    document.getElementById("Username_end").innerHTML = looks1
-                    document.Check_Form.Username.classList.remove("is-valid")
-                    document.Check_Form.Username.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("Username_end").innerHTML = looks1
-                    document.Check_Form.Username.classList.remove("is-invalid")
-                    document.Check_Form.Username.classList.add("is-valid")
-                }
-
-                if(check4 == null || check4 == ""){//city
-                    looks1 = "Please provide a valid city."
-                    document.getElementById("City_end").innerHTML = looks1
-                    document.Check_Form.City.classList.remove("is-valid")
-                    document.Check_Form.City.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("City_end").innerHTML = looks1
-                    document.Check_Form.City.classList.remove("is-invalid")
-                    document.Check_Form.City.classList.add("is-valid")
-                }
-
-                if(check5 == null || check5 == ""){//state
-                    looks1 = "Please provide a valid state."
-                    document.getElementById("State_end").innerHTML = looks1
-                    document.Check_Form.State.classList.remove("is-valid")
-                    document.Check_Form.State.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("State_end").innerHTML = looks1
-                    document.Check_Form.State.classList.remove("is-invalid")
-                    document.Check_Form.State.classList.add("is-valid")
-                }
-
-                if(check6 == null || check6 == ""){//zip
-                    looks1 = "Please provide a valid zip."
-                    document.getElementById("Zip_end").innerHTML = looks1
-                    document.Check_Form.Zip.classList.remove("is-valid")
-                    document.Check_Form.Zip.classList.add("is-invalid")
-                }else{
-                    looks1 = "Looks good!"
-                    document.getElementById("Zip_end").innerHTML = looks1
-                    document.Check_Form.Zip.classList.remove("is-invalid")
-                    document.Check_Form.Zip.classList.add("is-valid")
-                }
-
-                //check box
-                
             }
         </script>
     </head>
     <body class="container">
-        <form name="Check_Form" method="GET">
-            <div class="m-5">
-                <div class="form-row">
-                    <div class="col-4">
-                        <label style="font-size: 13px;">First name</label>
-                        <input type="text" class="form-control is-invalid" id="First" placeholder="First name" required>
-                        <div class="valid" id="First_end">
-                            Please write First name.
-                        </div>
-                    </div>
 
-                    <div class="col-4">
-                        <label style="font-size: 13px;">Last name</label>
-                        <input type="text" class="form-control is-invalid" id="Last" placeholder="Last name" required>
-                        <div class="valid" id="Last_end">
-                            Please write Last name.
-                        </div>
-                    </div>
-
-                    <div class="col-4 mt-1">
-                        <label></label>
-                        <input type="text" class="form-control is-invalid" id="Username" placeholder="Username" aria-describedby="inputGroupPrepend3" required>
-                        <div class="invalid" id="Username_end">
-                            Please choose a username.
-                        </div>
-                    </div>
+        <form class="needs-validation" novalidate>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
-
-                <div class="form-row mt-5">
-                    <div class="col-4">
-                        <input type="text" class="form-control is-invalid" id="City" placeholder="City" required>
-                        <div class="invalid" id="City_end">
-                            Please provide a valid city.
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <input type="text" class="form-control is-invalid" id="State" placeholder="State" required>
-                        <div class="invalid" id="State_end">
-                            Please provide a valid state.
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <input type="text" class="form-control is-invalid" id="Zip" placeholder="Zip" required>
-                        <div class="invalid" id="Zip_end">
-                            Please provide a valid zip.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group mt-5">
-                    <div class="form-check">
-                        <input class="form-check-input is-invalid" type="checkbox" value="" id="Check" required>
-                        <label class="form-check-label" for="invalidCheck3">
-                            Agree to terms and conditions
-                        </label>
-
-                        <div class="invalid">
-                            You must agree before submitting.
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-primary" type="submit" onclick="checkFunction()">Submit form</button>
             </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Username</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">City</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                    Please provide a valid zip.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
         </form>
+
+        <script>
+
+        (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+            });
+        }, false);
+        })();
+        </script>
     </body>
 </html>
