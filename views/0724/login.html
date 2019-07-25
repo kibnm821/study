@@ -24,7 +24,7 @@
 
             function getCookie()
             {
-                
+
                 var decodedCookie = decodeURIComponent(document.cookie);
                 var ca = decodedCookie.split(';');
                 alert(ca[1]);
@@ -35,8 +35,10 @@
     </head>
     <body>
 
+
         <div class="container d-flex justify-content-center">
             <form action="/loginpage" onsubmit="return setCookie(this)">
+
                 <div>
                     <div>
                         <label><h3>Log In</h3></label>
@@ -47,13 +49,15 @@
                     <div class="form-group">
                         <input type="password" class="form-control" id="pwd">
                     </div>
+
                     <div>
                         <input type = "checkbox" id="remem">
                         <label>Remember me</label>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
+
+   
                 </div>
             </form>
         </div>

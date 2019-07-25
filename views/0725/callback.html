@@ -11,9 +11,27 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title></title>
-        <script></script>
+        <script>
+            function exeFunction(firstpara){
+                prefunction(firstpara.name,"second",callbackfunction);
+            };
+            function prefunction(para2,parasecond02,callback01){
+                console.log(para2);
+                if(typeof callback01 == 'function'){
+                    callback01(para2,parasecond02);
+                }
+            };
+            function callbackfunction(para1,parasecond01){
+                console.log(para1+','+parasecond01);
+                $("#bname").html(para1+','+parasecond01);
+                console.log("callback Call");
+                
+            };
+        </script>
     </head>
     <body>
-        
+        <button onclick="exeFunction(this);"name ="exe Function" >exe function</button>
+        <button onclick="exeFunction(this);"name ="exe2 Function" >exe2 function</button>
+        <p id="bname"></div>
     </body>
 </html>

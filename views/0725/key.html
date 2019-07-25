@@ -11,9 +11,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title></title>
-        <script></script>
+        <script>
+         $(function(){
+             $("button").click(function(){
+                 $("p").hide ("slow",function(){
+                     alert("Example with callback");
+                 });
+             });
+             $("h1").click(function(){
+                 $("h1").show(1000);
+                 alert("Without callback");
+             });
+         });
+        </script>
     </head>
     <body>
-        
+        <h1>Jon Jal</h1>
+        <p>Jeon Woong Jae</p>
+        <button class= "btn btn-primary">click!</button>
     </body>
 </html>
