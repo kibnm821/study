@@ -11,36 +11,52 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title>Login</title>
-        
+        <script>
+            function setCookie(logform)
+            {
+                var id = logform.id.value;
+                var pwd = logform.pwd.value;
+                var check = logform.remem.checked;
+                document.cookie = id + ";" + pwd +";"+"path=/";
+                document.cookie = check + ";"+"path=/";
+                alert(document.cookie);
+            }
+
+            function getCookie()
+            {
+                
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                alert(ca[1]);
+                document.getElementById("id").value = ca[0];
+                document.getElementById("pwd").value = ca[1];
+             }
+        </script>
     </head>
     <body>
-        <div class="container">
-            <form action="/loginpage">
+
+        <div class="container d-flex justify-content-center">
+            <form action="/loginpage" onsubmit="return setCookie(this)">
                 <div>
-                    <div class="col-6">
-                        <label>Log In</label>
+                    <div>
+                        <label><h3>Log In</h3></label>
                     </div>
-                    <div class="col-6">
-                        <input type="text" id="id">
+                    <div class = "form-group">
+                        <input type="text" class="form-control" id="id">
                     </div>
-                    <div class="col-6">
-                        <input type="password" id="pwd">
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="pwd">
                     </div>
-                    <div class="col-6">
-                        <button type="submit" onclick="setCookie()">Login</button>
+                    <div>
+                        <input type = "checkbox" id="remem">
+                        <label>Remember me</label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </form>
         </div>
-        <script>
-            function setCookie(){
-                var id = document.getElementById("id").value
-                var pwd = document.getElementById("pwd").value
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expiress = "expiress=" + d.toGMTString();
-                document.cookie = id + ";" + pwd + ";" + expires + ";path=/";
-            }
-        </script>
+
     </body>
 </html>
