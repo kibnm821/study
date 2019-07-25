@@ -26,8 +26,23 @@ router.get('/geo', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0724/Function.html'));
 });
 
+router.get('/Cookies', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/Cookies.html'));
+});
+
+router.get('/login', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/login.html'));
+});
+
 //request
 
 
+<<<<<<< HEAD
+=======
+router.get('/loginpage', function (req, res) {
+console.log(req.query);
+res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd)
+});
+>>>>>>> fc6e05b521d4df81e9dda7ef5b79f3a8d0115fad
 
 app.use('/', router);
