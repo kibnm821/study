@@ -10,18 +10,15 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>jQuery</title>
-        <script></script>
+        <title>Syntax</title>
+        <script>
+            var aa = function(){$("p").hide();}
+            var test = function(){$("button").click(aa)}
+            $().ready(test);
+        </script>
     </head>
     <body>
-        <script>
-            function popUp(){
-                alert("You entered h1!");
-            }
-            $(function(){
-                $("h1").hover(popUp());
-            });
-        </script>
-        <h1>This is a paragraph.</h1>
+        <p>This is a paragraph.</p>
+        <button>Click me</button>
     </body>
 </html>
