@@ -21,24 +21,13 @@ router.get('/login', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0723/Date.html'));
 });
 
-<<<<<<< HEAD
-=======
-router.get('/onsubmit', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0723/onsubmit.html'));
+
+router.get('/geo', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/0724/Function.html'));
 });
 
 //request
->>>>>>> e84510b289b449aa0fb5d973b34f45aecff51da9
 
 
-<<<<<<< HEAD
-//request
-res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.password);
-=======
-router.get('/login', function (req, res) {
-console.log(req.query);
-res.send('Request name : '+req.query.name+'<br>Request password : '+req.query.pwd)
-});
 
->>>>>>> e84510b289b449aa0fb5d973b34f45aecff51da9
 app.use('/', router);
