@@ -10,24 +10,17 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title></title>
+        <title>Event</title>
         <script>
-           $(function(){
-                $("h1").on({ // 하나 이상 Event 묶음, Hash 방식 이용
-                mouseenter: function(){
-                $(this).css("background-color", "lightgray");
-                },
-                mouseleave: function(){
-                $(this).css("background-color", "lightblue");
-                },
-                click: function(){
-                $(this).css("background-color", "yellow");
-                }
-                });
+            $(function(){
+                $("input").focus(function(){
+                    $(this).css("background-color","grey");});
+                $("input").blur(function(){
+                    $(this).css("background-color","green");});
             });
         </script>
     </head>
     <body>
-            <h1>Click or move the mouse pointer over this paragraph.</h1>
+        Name : <input type="text" name="fullname"><br>
     </body>
 </html>

@@ -10,21 +10,15 @@
         <!--CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title></title>
-        <script>            
-            var f_two = function(){$("p").hide();}
-            var f_one = function(){$("button").click(f_two);}
-            $().ready(f_one);
-            
-
+        <title>Syntax</title>
+        <script>
+            var aa = function(){$("p").hide();}
+            var test = function(){$("button").click(aa)}
+            $().ready(test);
         </script>
     </head>
     <body>
-        <div class = "row d-flex justify-content-center">
-            <div class="col-6">
-                <p>This is a paragragh</p>
-            </div>
-        <button class = "btn btn-primary">Click me</button>
-        </div>
+        <p>This is a paragraph.</p>
+        <button>Click me</button>
     </body>
 </html>
