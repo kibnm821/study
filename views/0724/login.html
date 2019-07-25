@@ -14,8 +14,20 @@
         
     </head>
     <body>
+        <script>
+            function setCookie(){
+                var name = document.getElementById("id").value
+                var value = document.getElementById("pwd").value
+                document.cookie = name + ";" + pwd + ";path=/";
+            }
+            function getCookie(){
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                alert(ca[0]);
+            }
+        </script>
         <div class="container">
-            <form action="/loginpage">
+            <form>
                 <div>
                     <div class="col-6">
                         <label>Log In</label>
@@ -27,20 +39,11 @@
                         <input type="password" id="pwd">
                     </div>
                     <div class="col-6">
-                        <button type="submit" onclick="setCookie()">Login</button>
+                        <button type="submit" onclick="setCookie(id,pwd)">Login</button>
+                        <button onclick="getCookie()">getCookie</button>
                     </div>
                 </div>
             </form>
         </div>
-        <script>
-            function setCookie(){
-                var id = document.getElementById("id").value
-                var pwd = document.getElementById("pwd").value
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expiress = "expiress=" + d.toGMTString();
-                document.cookie = id + ";" + pwd + ";" + expires + ";path=/";
-            }
-        </script>
     </body>
 </html>
