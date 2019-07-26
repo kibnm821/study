@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Try</title>
+        <script>
+            $(function(){
+                $("#d1").click(function(){
+                    $("#real").hide("slow");
+                });
+                $("#d2").click(function(){
+                    $("#real").fadeIn("slow")
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="pl-3">
+            <div>
+                <button id="d1">Discovery</button>
+                <button id="d2">Atlantis</button>
+                <button id="d3">Endeavour</button>
+                <p id="real"><b>Note: </b>Click the above buttons to set he value of following input box.</p>
+                <p id="backup"><b>Note: </b>Click the above buttons to set he value of following input box.</p>
+            </div>
+
+            <div class="pl-3">
+                <div class="row">
+                    <p><b>Name:</b></p>
+                    <input type="text" value="sanghun Oh">
+                </div>
+
+                <div class="row">
+                    <p><b>Comments:</b></p>
+                    <textarea rows="3" id="text">Hello, World!
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="row pl-3">
+                <p><b>City:</b></p>
+                <select class="custom-select col-3" id="select">
+                    <option selected>Paris</option>
+                    <option value="1">Korea</option>
+                    <option value="2">USA</option>
+                </select>
+            </div>
+            <div>
+                <p><b>Note: </b> FIll the above from and click the following button to get the value.</p>
+                <button id="show1">Get Name</button>
+                <button id="show2">Get Comment</button>
+                <button id="show3">Get City</button>
+            </div>
+        </div>
+    </body>
+</html>
