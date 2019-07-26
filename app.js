@@ -48,6 +48,9 @@ res.send('Request id : '+req.query.id+'<br>Request password : '+req.query.pwd)
 router.get('/popup', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/0725/jquery.html'));
     });
+router.get('/pro1', function (req, res) {
+    res.sendFile(path.join(__dirname + '/Views/0725/pro1.html'));
+    });
 router.get('/syntax', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/0725/syntax.html'));
     });

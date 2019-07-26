@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title></title>
+        <script>
+        $(function(){
+            $("#name").click(function(){ alert("name: " + $("#test").val()); });
+            $("#comment").click(function(){ alert("comments: " + $("#test1").val() ); });
+            $("#city").click(function(){ alert("city: " + $("#test2").val()); });
+            });
+        $(function(){
+            $("#remove").click(function(){$("#p1").hide("slow");});
+            $("#creat").click(function(){$("#p1").fadeIn("slow");});
+            $("#set").click(function(){$("#p2").text("+ By Jeon Woong Jae");});
+        });
+        $(function(){
+            $('#reverse').click(function(){
+                $("input:checkbox[name='a']").each(function(e)
+                {if($(this).is(":checked") == true) {$(this).prop('checked',false);}
+                else{$(this).prop('checked',true);}
+                });
+                });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div name = "fun1">
+                <p id="p1">Note: Click the above buttons to set the value of following input box.<span id="p2"></span></p>
+                <button class="btn btn-primary" id ="remove">Remove</button>
+                <button class="btn btn-primary" id="creat">Creat</button>
+                <button class="btn btn-primary" id= "set">Set</button>
+            </div>     
+            
+            <div name= "fun2">
+                <div class= "text-left">
+                <p> Name</p><input type = "text" name="name" id="test">
+                <p> Comments</p><textarea id="test1" name="text" >Hello, World!</textarea> 
+                <p > City</p>
+                <select type = "text" id="test2">
+                    <option>Paris</option>
+                    <option>Deagu</option>
+                    <option>Jeju</option>
+                    <option>Butssan</option>
+                </select>
+                </div class= "mt-2">
+                <button id ="name" class="btn btn-primary">Get Name</button>
+                <button id="comment" class="btn btn-primary">Get Comment</button>
+                <button id= "city" class="btn btn-primary">Get City</button>
+            </div>
+
+            <div name = "fun3">
+                <p><input type="checkbox" name="a" value="1"> Ardiino</p>
+                <p><input type="checkbox" name="a" value="2"> Android</p>
+                <p><input type="checkbox" name="a" value="3"> AI</p>
+                <p><input type="checkbox" name="a" value="4"> Bigdata</p>
+                <button id="reverse" class="btn btn-primary">Reverse</button>
+            </div>
+        </div>
+    </body>
+</html>
