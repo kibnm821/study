@@ -19,8 +19,23 @@
                 $("#d2").click(function(){
                     $("#real").fadeIn("slow")
                 });
-
-
+                $("#d3").click(function(){
+                    $("#real").text($("#real").text()+$("#backup").text());
+                });
+            });
+            $(function(){
+                $("#show1").click(function(){
+                    alert("name: " +$("#name").val());
+                });
+                $("#show2").click(function(){
+                    alert("Comment: " +$("#text").val());
+                });
+                $("#show3").click(function(){
+                    alert("City: " +$("#select").name());
+                });
+            });
+            $(function(){
+                $("replace").click(function());
             });
         </script>
     </head>
@@ -37,7 +52,7 @@
             <div class="pl-3">
                 <div class="row">
                     <p><b>Name:</b></p>
-                    <input type="text" value="sanghun Oh">
+                    <input type="text" id="name" value="sanghun Oh">
                 </div>
 
                 <div class="row">
@@ -60,6 +75,13 @@
                 <button id="show1">Get Name</button>
                 <button id="show2">Get Comment</button>
                 <button id="show3">Get City</button>
+            </div>
+            <div>
+                <p><input type="checkbox" name="auino">Arduino</p>
+                <p><input type="checkbox" name="and">Android</p>
+                <p><input type="checkbox" name="ai">AI</p>
+                <p><input type="checkbox" name="big">Big Data</p>
+                <p><button id="replace">All Check Toggle</button></p>
             </div>
         </div>
     </body>
