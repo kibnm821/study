@@ -30,8 +30,8 @@ router.get('/login', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0724/login.html'));
 });
 
-router.get('/jQuery', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0725/jQuery.html'));
+router.get('/', function (req, res) {
+res.sendFile(path.join(__dirname + '/views/small_pro/index.html'));
 });
 
 //request
