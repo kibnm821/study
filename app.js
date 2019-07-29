@@ -21,12 +21,12 @@ router.get('/geo', function (req, res) {
 res.sendFile(path.join(__dirname + '/Views/0724/Function.html'));
 });
 
-router.get('/Cookies', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0724/Cookies.html'));
+router.get('/small_pro/Introduction_item', function (req, res) {
+res.sendFile(path.join(__dirname + '/views/small_pro/Introduction_item.html'));
 });
 
-router.get('/login', function (req, res) {
-res.sendFile(path.join(__dirname + '/Views/0724/login.html'));
+router.get('/small_pro/SignUp', function (req, res) {
+res.sendFile(path.join(__dirname + '/views/small_pro/SignUp.html'));
 });
 
 router.get('/', function (req, res) {
