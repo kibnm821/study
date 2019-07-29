@@ -55,3 +55,15 @@ router.get('/syntax', function (req, res) {
     res.sendFile(path.join(__dirname + '/Views/0725/syntax.html'));
     });
 app.use('/', router);
+
+/////////////////////////////////////치원/////////////////////////////////////////////////
+router.get('/Sign_Up', function (req, res) {
+console.log(req.query);
+res.send('Request id : '+req.query.id+'<br>Request name : '+req.query.name+'<br>Request Password : '+req.query.pwd+
+'<br>Request email : '+req.query.email+'<br>Request pwdcheck : '+req.query.pwdcheck+'<br>Request tel : '+req.query.tel1+
+' - '+req.query.tel2+' - '+req.query.tel3+'<br>Request addr : '+req.query.addr)
+});
+
+router.get('/Signup', function (req, res) {
+res.sendFile(path.join(__dirname + '/Views/small pro/SignUp.html'));
+});

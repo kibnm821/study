@@ -24,11 +24,11 @@
                   </div>
                   <div class="modal-body mx-3">
                     <div class="md-form mb-5">
-                    <label data-error="wrong" data-success="right" for="defaultForm-email"><strong>Email</strong></label>
+                    <label data-error="wrong" data-success="right" for="defaultForm-email"><strong>ID</strong></label>
                     <input type="email" id="defaultForm-email" class="form-control validate" name ="logid">
                   </div>
                   <div class="md-form mb-4">
-                    <label data-error="wrong" data-success="right" for="defaultForm-pass"><strong>password</strong></label>
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass"><strong>PW</strong></label>
                     <input type="password" id="defaultForm-pass" class="form-control validate " name = "logpw">
                   </div>
                     </div>
@@ -41,38 +41,47 @@
         </form>
       
       
-      <div class="container">
-        <header class = "blog-header py-3">
+     
+
+
+    <header class = "blog-header py-3">
+      <div class= "jumbotron d-flex p-3 p-md-5 text-white rounded bg-dark text-center justify-content-center">
+          <div class = "col-md-8 px-0">
+            <h1 class= "display-4">제가 만든 제과</h1>
+            <p class = "my-3">
+            SPRING SUMMER COLLECTION 2019
+            </p>
+          </div> 
+      </div> 
+      <div class="container">            
           <div class = "row flex-nowrap justify-content-between align-items-center">
-            <div class = "col-4"><a class = "text-muted" href="/Views/store">Store</a></div>
-            <div class = "col-4 text-center"><h3><a class = "text-dark" href="/Views/home">WOONGSINSA</a></h3></div>
+            <div class = "col-8">
+                <a class = "text-muted p-1" href="/Views/store">회사 소개</a>
+                <a class = "text-muted p-1" href="/Views/store">제품 소개</a>
+                <a class = "text-muted p-1" href="/Views/store"> 이벤트 </a>
+                <a class = "text-muted p-1" href="/Views/store"> 고객센터 </a>
+                <a class = "text-muted p-1" href="/Views/store"> 인재채용 </a>
+            </div>
+           
             <div class = "col-4 d-flex justify-content-end align-items-center">
               <button class="text-muted bg-white border-0" data-toggle="modal" data-target = "#login">Sign In </button>/
               <!--로그인 팝업창-->
               <a class="text-muted bg-white border-0" href="/Views/signup" role="button">Sign Up</a>
             </div> 
           </div>
-        </header>
-        <div class= "jumbotron p-3 p-md-5 text-white rounded bg-dark text-center justify-content-center">
-          <div class = "col-md-6 px-0">
-            <h1 class= "display-4">WSS</h1>
-            <p class = "my-3">
-            SPRING SUMMER COLLECTION 2019
-            </p>
-          </div> 
-        </div>
-         
-      </div>
-      
-      <!--body-->
-    <div class="container d-flex justify-content-center">
-        <div class="">
-            <h1 class="mb-5 text-center">회원 가입</h1>
-            <form>
+      </div> 
+    </header>
+
+    
+<!--body-->
+<div class="container d-flex justify-content-center">
+        <div>
+            <h1 class="mt-5 mb-5 text-center">회원 가입</h1>
+            <form action="/Sign_Up">
                 <div class="row">
                     <label class="col-3 pr-0">아이디</label>
                     <div class="col-8">
-                        <input class="col-12" type="text" id="id">
+                        <input class="col-12 p-0" type="text" id="id">
                     </div>
                 </div>
 
@@ -86,7 +95,7 @@
                 <div class="row">
                     <label class="col-3 pr-0">비밀번호</label>
                     <div class="col-8">
-                        <input class="col-12 p-0" type="pwd" id="pwd">
+                        <input class="col-12 p-0" type="password" id="pwd">
                     </div>
                 </div>
 
@@ -100,7 +109,7 @@
                 <div class="row">
                     <label class="col-3 pr-0">비밀번호 확인</label>
                     <div class="col-8">
-                        <input class="col-12 p-0" type="pwdchk" id="pwdcheck">
+                        <input class="col-12 p-0" type="password" id="pwdcheck">
                     </div>
                 </div>
 
@@ -108,7 +117,7 @@
                     <label class="col-3 pr-0">전화번호</label>
                     <div class="row col-8 d-flex justify-content-center">
                         <div class="col-1 pr-5">
-                        <select class="row" name="tel1" size="1">
+                        <select class="row" name="tel1" size="1" id="tel1">
                             <option value="010" selected>010</option>
                             <option value="011" selected>011</option>
                             <option value="031" selected>031</option>
@@ -136,6 +145,6 @@
             </form>
         </div>
     </div>
-      <!--body-->
+    <!--body-->
       </body>
 </html>
