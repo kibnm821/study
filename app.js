@@ -10,7 +10,6 @@ const path = require('path');
 const router = express.Router();
 
 app.use(express.static('public'))
-app.use(express.static('Views'))
 
 //ps.형 여기 인덱스로 들어가는거요 127.0.0.1:3000/주소일때 접속하는 주소
 //분류 페이지 제가 만들어 놓을테니까 이거는 건드시지 마시고 나머지 주소 건드시면 됩니다.
